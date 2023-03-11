@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <ion-input placeholder="¿Que necesitas?"type="text" routerLink = "/tabs/tab4"><hr></ion-input>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-slides pager="true">
+    <ion-slide *ngFor="let j of indexes; let k = index">
+      <div *ngIf="categories.length != 0">
+        <div class="category-slide" *ngFor="let c of categories; let i = index" routerLink="/products/{{c.key}}">
+          <img *ngIf="i ==0+7*k" src="{{c.photoURL}}" style="position:absolute; margin-top: 8.5%;margin-left: 4%;"/>
+          <img *ngIf="i ==1+7*k" src="{{c.photoURL}}" style="position:absolute; margin-top: 10%;margin-left: -20%;"/>
+          <img *ngIf="i ==2+7*k" src="{{c.photoURL}}" style="position:absolute; margin-top: -8%;margin-left: -35.5%;"/>
+          <img *ngIf="i ==3+7*k" src="{{c.photoURL}}" style="position:absolute; margin-top: -32%;margin-left: -32%;"/>
+          <img *ngIf="i ==4+7*k" src="{{c.photoURL}}" style="position:absolute; margin-top: -43%;margin-left: -11%;"/>
+          <img *ngIf="i ==5+7*k" src="{{c.photoURL}}" style="position:absolute; margin-top: -33%;margin-left: 11%;"/>
+          <img *ngIf="i ==6+7*k" src="{{c.photoURL}}" style="position:absolute; margin-top: -11%;margin-left: 18%;"/>
+        </div>
+      </div>
+    
+      <div>
+       <a href="https://api.whatsapp.com/send?phone=593986698739"><img class = "pide" src="./assets/images/market3.png"   width="50px" style="position:absolute; margin-top: -18%;margin-left: -14%;"/></a> 
+      </div>
+      <!--
+    -->
+    </ion-slide>
+
+  </ion-slides>
+
+</ion-content>
+
+<ion-footer>
+  <h1>Tu tienda online!</h1>
+</ion-footer>

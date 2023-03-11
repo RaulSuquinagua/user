@@ -1,0 +1,57 @@
+<!---
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-select (ionChange)="changeLang()" [(ngModel)]="lang">
+        <ion-select-option value="es">Español</ion-select-option>
+        <ion-select-option value="en">English</ion-select-option>
+        <ion-select-option value="ar">عربى</ion-select-option>
+        
+      </ion-select>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+-->
+
+<ion-content class="ion-padding">
+  <!--
+  <div class="login-header">
+    <img src="./assets/images/pide.png" width="100px"/>
+    <img src="./assets/images/pidenos2.png" width="200px"/>
+    <h3>{{ 'APP_NAME' | translate}}</h3>
+    <p>{{'APP_SLOGAN' | translate}}</p>
+  </div>
+-->
+  <div class="login-header">
+    <!--<img src="./assets/images/icono.png" />
+	  &nbsp;
+     <p style="color:#3880ff">Entrega Rápido y Seguro ..</p> -->
+  </div>
+  <ion-list lines="none">
+    <ion-item>
+      <!--<ion-label position="stacked">{{ 'EMAIL' | translate }}</ion-label>-->
+      <ion-input placeholder="Email"type="text" [(ngModel)]="userInfo.email"><hr></ion-input>
+    </ion-item>
+    <hr>
+  <ion-item>
+    <!--<ion-label position="stacked">{{ 'PASSWORD' | translate }}</ion-label>-->
+    <ion-input [type]="password_type" placeholder="Contraseña" name="password" [(ngModel)]="userInfo.password" required></ion-input>
+    <ion-icon slot = "end" class="passwordIcon" [name]="passwordToggleIcon" (click)="togglePasswordMode()"></ion-icon>
+  </ion-item>
+  <hr>
+
+    <ion-item>
+      <ion-button slot="end" color="secondary" size="small" fill="clear" routerLink="/forget">
+        {{ 'FORGET' | translate }}
+      </ion-button>
+    </ion-item>
+  </ion-list>
+  <div class="ion-padding">
+    <ion-button expand="block" (click)="login()">
+      {{ 'LOGIN' | translate }}
+    </ion-button>
+    &nbsp;&nbsp;
+    <ion-button color="secondary" expand="block" fill="clear" routerLink="/register">
+      {{ 'CREATE_NEW_ACCOUNT' | translate }}</ion-button>
+  </div>
+</ion-content>
